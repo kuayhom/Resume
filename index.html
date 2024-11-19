@@ -1,80 +1,88 @@
 <!DOCTYPE html>
-<html lang="th">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Resume</title>
+    <title>Student Resume</title>
     <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
 </head>
 <body>
+    <nav>
+        <div class="logo">Resume</div>
+        <input type="checkbox" id="menu-toggle">
+        <label for="menu-toggle" class="menu-icon"><i class="fas fa-bars"></i></label>
+        <ul class="menu">
+            <li><a href="#about">About Me</a></li>
+            <li><a href="#education">Education</a></li>
+            <li><a href="#employment">Employment History</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
     <header>
-        <div class="container">
-            <!-- เพิ่มภาพโปรไฟล์ -->
-            <img src="c:\Users\nuckk\Downloads\365936087_988415269036313_5860864988591671965_n.jpg" alt="โปรไฟล์" class="profile-image">
-            <h1>Chayapat Sommut</h1>
-            <p>Digital Information and Technology(DIT)</p>
-            <p>Panyapiwat Institute of Management(PIM)</p>
-            <a href="http://pim.ac.th" target="_blank">Click here pim</a>
-            <p></p>
-        </div>
+        <img src="c:\Users\nuckk\Downloads\365936087_988415269036313_5860864988591671965_n.jpg" alt="Profile Picture" class="profile-pic">
+        <h1>Chayapat Sommut</h1>
+        <p> Digital Information and Technology</p>
+        <p><a href="http://pim.ac.th" target="_blank">Panyapiwat Institute of Management</a></p>
     </header>
 
-    <section class="about">
-        <div class="container">
-            <h2>About Me</h2>
-            <p>Hello! I'm Chayapat Sommut, a passionate programmer and student pursuing a degree in Digital Information and Technology (DIT) at Panyapiwat Institute of Management.</p>
-        </div>
+    <section id="about">
+        <h2>About Me</h2>
+        <hr>
+        <p>I am a dedicated computer science student with a passion for software development, eager to expand my knowledge and contribute to real-world projects.</p>
     </section>
 
-    <section class="experience">
-        <div class="container">
-            <h2>Employment History</h2>
-            <ul>
-                <li>
-                    <h3>Position</h3>
-                    <p>7eleven - March 2567 to May 2567</p>
-                    </ul>
-                </li>
-            </ul>
-        </div>
+    <section id="education">
+        <h2>Education</h2>
+        <hr>
+        <ul>
+            <li>Bachelor of Science in Computer Science, <em>Panyapiwat Institute of Management</em></li>
+            <em>Debsirinklongsibsam Pathum Thani School</em></li>
+        </ul>
     </section>
 
-    <section class="education">
-        <div class="container">
-            <h2>Study</h2>
-            <ul>
-                <li>
-                    <h3>Bachelor's degree : Digital Information and Technology</h3>
-                    <p>Panyapiwat Institute of Management - 2566-Present</p>
-                </li>
-            </ul>
-        </div>
+    <section id="employment">
+        <h2>Employment History</h2>
+        <hr>
+        <ul>
+            <li>7 eleven, 2023 - Present</li>
+        </ul>
     </section>
 
-    <section class="skills">
-        <div class="container">
-            <h2>Skills</h2>
-            <ul>
-                <li>HTML, CSS, JavaScript </li>
-                <span class="stars">★ ★ ★ ★ ★</span>
-        </p>
-                <li>React, Node.js </li>
-                <span class="stars">★ ★ ★ ★ ☆</span>
-            </p>
-                <li>UI/UX : </li>
-                <span class="stars">★ ★ ★ ★ ☆</span>
-            </p>
-                <li>SQL, MongoDB </li>
-                <span class="stars">★ ★ ★ ★ ★</span>
-            </p>
-            </ul>
-        </div>
+    <section id="skills">
+        <h2>Skills</h2>
+        <hr>
+        <ul>
+            <li>HTML <span class="stars">★★★★★</span></li>
+            <li>CSS <span class="stars">★★★★☆</span></li>
+            <li>JavaScript <span class="stars">★★★★☆</span></li>
+            <li>Python <span class="stars">★★★☆☆</span></li>
+        </ul>
     </section>
 
-    <footer>
-        <div class="container">
-            <p>&copy; 2024 Chayapat Sommut</p>
-        </div>
-    </footer>
+    <section id="contact">
+        <h2>Contact</h2>
+        <hr>
+        <ol>
+            <li>Email: nuckki01@ac.sa.th</li>
+            <li>Phone: 065-88x-666x</li>
+            <li>Address: 109/463 12110 Phathumthnai </li>
+        </ol>
+    </section>
+
+    <script>
+        // Add smooth scrolling to anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
 </body>
 </html>
+
